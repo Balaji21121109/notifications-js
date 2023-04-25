@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .notification{
+      display: flex;
+      border: 1px solid red;
+      gap: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .imag_text{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+    .name_person{
+      font-weight: 900;
+    }
+    .text_notification{
+     display: flex;
+     gap: 40px;
+    }
+    .imag_text{
+      background-color: aqua;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="notification">
+    <div class="text_notification"><h1>Notifications </h1> <h1>3</h1></div>
+    
+   <div><h1>  Mark all as read
+  </h1></div>
+  </div>
+  <div class="main_notification">
+    <div class="imag_text" onclick="">
+      <img src="./assets/images/avatar-angela-gray.webp" alt="image"/>
+      <p><span class="name_person">Mark Webber</span> reacted to your recent post <span class="name_person">My First tournament today!</span>
+        1m ago</p>
+    </div>
+    <div class="imag_text">
+      <img src="./assets/images/avatar-anna-kim.webp" alt="image"/>
+      <p><span class="name_person">Angela Gray</span> reacted to your recent post <span class="name_person">My First tournament today!</span>
+        1m ago</p>
+    </div>
+    <div class="imag_text">
+      <img src="./assets/images/avatar-jacob-thompson.webp" alt="image"/>
+      <p><span class="name_person"> Jacob Thompson</span> reacted to your recent post <span class="name_person">My First tournament today!</span>
+        1m ago</p>
+    </div>
+    <div class="imag_text">
+      <img src="./assets/images/avatar-kimberly-smith.webp" alt="image"/>
+      <p><span class="name_person">Rizky Hasanuddin</span> reacted to your recent post <span class="name_person">My First tournament today!</span>
+        1m ago</p>
+    </div>
+  </div>
+
+</div>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <div class="radiodiv" onclick=selected(this)>one</div>
+<div class="radiodiv" onclick=selected(this)>two</div>
+<div class="radiodiv" onclick=selected(this)>three</div>
+<div class="radiodiv" onclick=selected(this)>four</div>
+<div class="radiodiv" onclick=selected(this)>five</div>
+<div class="radiodiv" onclick=selected(this)>six</div>
+<div class="radiodiv" onclick=selected(this)>seven</div>
+
+<script>
+var divItems = document.getElementsByClassName("radiodiv");
+
+function selected(item) {
+    this.clear();
+    item.style.backgroundColor = 'red';
+}
+
+function clear() {
+    for(var i=0; i < divItems.length; i++) {
+        var item = divItems[i];
+        item.style.backgroundColor = 'white';
+    }
+}
+</script>
+</body>
+</html>
